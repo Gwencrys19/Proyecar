@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul>
+    {% for cliente in clientes %}
+        <li>{{ cliente.Id_cedula }} - {{ cliente.nombres }} - {{ cliente.email }} - {{ cliente.direccion }} - {{ cliente.telefono }}</li>
+    {% endfor %}
+    </ul>
+    <button><a href="/">volver</a></button>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="{% static 'css/agregarp.css' %}">
+</head>
+<body>
+    <h1>Agregar Nuevo Producto</h1> 
+
+{% block content %}
+
+<form>
+    <div>
+        <label for="id_codigo_productos">Código productos:</label>
+        <input type="text" name="codigo_productos" maxlength="10" required="" id="id_codigo_productos">
+    </div>
+    <div>
+        <label for="id_nombre_productos">Nombre productos:</label>
+        <input type="text" name="nombre_productos" maxlength="100" required="" id="id_nombre_productos">
+    </div>
+    <div>
+        <label for="id_precio">Precio:</label>
+        <input type="number" name="precio" step="0.01" required="" id="id_precio">
+    </div>
+    <div>
+        <label for="id_fecha_ingreso">Fecha ingreso:</label>
+        <input type="text" name="fecha_ingreso" value="2024-02-21 22:08:12" required="" id="id_fecha_ingreso">
+        <input type="hidden" name="initial-fecha_ingreso" value="2024-02-21 22:08:12" id="initial-id_fecha_ingreso">
+    </div>
+    <div>
+        <label for="id_cantidad">Cantidad:</label>
+        <input type="number" name="cantidad" min="0" required="" id="id_cantidad">
+    </div>
+    <div>
+        <label for="id_descripcion">Descripción:</label>
+        <textarea name="descripcion" cols="40" rows="5" maxlength="200" required="" id="id_descripcion"></textarea>
+    </div>
+    <div>
+        <label for="id_categoria">Categoría:</label>
+        <select name="categoria" required="" id="id_categoria">
+            <option value="" selected="">---------</option>
+            <option value="1">Frutas</option>
+            <!-- Agrega más opciones de categoría según sea necesario -->
+        </select>
+    </div>
+    <button type="submit">Guardar</button>
+    <button><a href="/">volver</a></button>
+</form>
+{% endblock %}    
+
+</body>
+</html>

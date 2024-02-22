@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar al carrito</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+    <h1>Agregar al carrito</h1> 
+
+{% block content %}
+
+    <form action="/agregar_carrito/" method="POST">
+        {% csrf_token %}
+        {{form}}
+
+        <button>
+            Agregar
+        </button>
+
+    </form>
+{% endblock %}    
+</body>
+</html>
